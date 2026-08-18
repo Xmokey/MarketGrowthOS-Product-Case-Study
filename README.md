@@ -22,6 +22,39 @@ The difficult part was not deciding to build another business application. It wa
 
 ---
 
+## What I Built
+
+**MarketGrowthOS is a 0→1 SaaS product I took from a fragmented business problem through product definition, architecture, engineering and QA.**
+
+### The interesting parts
+
+| Product problem | My product decision |
+|---|---|
+| Fragmented CRM and operations | Unified commercial/operations platform |
+| Multiple businesses sharing one platform | Three-tier tenant model and isolation rules |
+| CRM progression was ambiguous | Explicit lifecycle, qualification gates and conversion policies |
+| Marketing platform already existed | Defined Mautic/GrowthOS ownership boundary |
+| Consultation booking didn't fit the marketing layer | Built a lean configurable consultation system |
+| No dedicated QA function | Built a 1,200+ line validation process |
+
+---
+
+## Product in Action
+
+### Merchant Dashboard
+
+*Screenshot goes here*
+
+### CRM
+
+*Screenshot goes here*
+
+### Consultation Booking
+
+*Screenshot goes here*
+
+---
+
 ## The Product Challenge
 
 The initial product vision was broad.
