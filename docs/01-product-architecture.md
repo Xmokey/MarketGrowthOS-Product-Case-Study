@@ -147,18 +147,33 @@ GrowthOS remains authoritative for the core CRM and operational lifecycle.
 
 # MarketGrowthOS and Stripe
 
-Stripe is used for payment processing and subscription billing.
+Stripe is used at multiple levels of the platform.
 
-The architectural boundary separates:
+## Platform Billing
 
-**Payment Processing**
+MarketGrowthOS uses Stripe for platform-level payment processing and subscription billing.
+
+Stripe provides payment and subscription confirmation that GrowthOS uses as part of its own billing and tenant-management workflows.
+
+## Merchant-Level Payments with Stripe Connect
+
+MarketGrowthOS also uses **Stripe Connect** at the merchant level.
+
+This supports businesses operating within GrowthOS that offer subscription-based services to their own customers.
+
+The architecture therefore separates:
+
+**GrowthOS Platform Billing**
 
 from:
 
-**Business Billing State**
+**Merchant Customer Billing**
 
-Stripe handles payment processing and provides billing/subscription confirmation, while GrowthOS uses that information as part of its own business workflows and tenant/subscription logic.
+GrowthOS manages the product workflow and business context, while Stripe/Stripe Connect handles the underlying payment infrastructure.
 
+At the merchant level, Stripe Connect allows the platform to support payment relationships associated with individual businesses without treating all merchant payments as a single platform-level billing relationship.
+
+This distinction is important because a merchant's subscription business is part of that merchant's own commercial workflow, rather than simply being a subscription to MarketGrowthOS itself.
 ---
 
 # Native Consultation Capability
@@ -222,7 +237,7 @@ The result is an architecture in which:
 **Mautic**
 → executes marketing automation
 
-**Stripe**
-→ processes payments and provides subscription/billing confirmation
+**Stripe / Stripe Connect**
+→ handles platform billing and merchant-level payment infrastructure
 
 This separation gives each system a defined responsibility while allowing the overall product workflow to operate as a connected system.
