@@ -27,18 +27,21 @@ The difficult part was not deciding to build another business application. It wa
 
 ## The Problems I Set Out to Solve
 
+## The Problems I Set Out to Solve
+
 MarketGrowthOS was built around recurring operational problems faced by SMBs, service businesses and solopreneurs.
 
-| Business problem | Product decision |
+| Problem | Product decision |
 |---|---|
-| **SMBs were running sales, marketing and operations across disconnected tools.** | **Create one connected operating platform** spanning CRM, marketing, consultations, projects, billing and support. |
-| **Manual follow-up and repetitive marketing tasks consumed time and allowed leads to go cold.** | **Automate workflows, emails, campaigns and repetitive tasks** around defined business events and customer states. |
-| **Leads could disappear after submitting a form or entering the funnel without converting.** | **Add abandoned-form re-engagement** to recover otherwise lost prospects. |
-| **Businesses lacked reliable visibility into which advertising activity was actually generating leads.** | **Build UTM tracking and attribution capabilities** to connect campaign activity with lead acquisition and provide ad intelligence. |
-| **Leads and customers could fall through the gaps between acquisition, qualification and conversion.** | **Create an explicit CRM lifecycle** with qualification gates, controlled transitions and conversion rules. |
-| **Consultations were a real business workflow, including for businesses and solopreneurs selling consultations as a service, but existing marketing tools did not provide the required capability.** | **Build a configurable native consultation system** supporting intake, scheduling and free or paid consultations. |
+| **1. Fragmented tools** | **Unified platform** — Bring CRM, marketing, consultations, project delivery, billing and support into one connected operating environment instead of forcing businesses to coordinate across multiple disconnected tools. |
+| **2. Repetitive work** | **Automation** — Automate workflows, emails, campaigns and repetitive operational tasks around defined business events and customer states. |
+| **3. Abandoned leads** | **Re-engagement** — Detect abandoned forms and create opportunities to re-engage prospects who entered the funnel but did not complete the intended action. |
+| **4. Poor ad intelligence** | **UTM tracking** — Capture campaign and traffic parameters so businesses can connect lead activity back to advertising sources and make better-informed marketing decisions. |
+| **5. Lead progression gaps** | **CRM lifecycle** — Create an explicit path from lead through qualification, opportunity and conversion, with defined gates, states and transition rules. |
+| **6. Consultation gap** | **Native consultation system** — Build a configurable consultation capability for scheduling, intake and qualification, including support for businesses and solopreneurs offering paid consultations as a service. |
+| **7. Delivery visibility** | **Project management + client monitoring** — Give teams a shared workspace for project delivery while allowing clients to see real-time progress, monitor work and provide structured feedback. |
 
-> **The product principle:** solve the operational problem first, then decide what GrowthOS should build, integrate, automate or defer.
+> **The product principle:** identify the operational gap first, then decide what GrowthOS should build, integrate, automate or defer.
 ---
 
 # Product in Action
