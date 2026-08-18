@@ -32,12 +32,13 @@ MarketGrowthOS was built around recurring operational problems faced by SMBs, se
 | Business problem | Product decision |
 |---|---|
 | **SMBs were running sales, marketing and operations across disconnected tools.** | **Create one connected operating platform** spanning CRM, marketing, consultations, projects, billing and support. |
+| **Manual follow-up and repetitive marketing tasks consumed time and allowed leads to go cold.** | **Automate workflows, emails, campaigns and repetitive tasks** around defined business events and customer states. |
+| **Leads could disappear after submitting a form or entering the funnel without converting.** | **Add abandoned-form re-engagement** to recover otherwise lost prospects. |
+| **Businesses lacked reliable visibility into which advertising activity was actually generating leads.** | **Build UTM tracking and attribution capabilities** to connect campaign activity with lead acquisition and provide ad intelligence. |
 | **Leads and customers could fall through the gaps between acquisition, qualification and conversion.** | **Create an explicit CRM lifecycle** with qualification gates, controlled transitions and conversion rules. |
-| **Consultations were a real business workflow, but existing marketing tools were not designed to handle them properly.** | **Build a configurable native consultation system** supporting intake, scheduling and both free and paid consultations. |
-| **Solopreneurs and service businesses often need to sell consultations directly, not just use them to qualify leads.** | **Design consultations as a commercial capability**, with configurable services, availability and payment options. |
-| **Growing businesses need broader operational capabilities, but building everything at once creates scope and delivery risk.** | **Prioritise the core operating platform while identifying HR & Payroll as a future operational capability rather than overloading V1.** |
+| **Consultations were a real business workflow, including for businesses and solopreneurs selling consultations as a service, but existing marketing tools did not provide the required capability.** | **Build a configurable native consultation system** supporting intake, scheduling and free or paid consultations. |
 
-> **The product principle:** solve the operational problem first, then decide what GrowthOS should build, integrate, configure or defer.
+> **The product principle:** solve the operational problem first, then decide what GrowthOS should build, integrate, automate or defer.
 ---
 
 # Product in Action
