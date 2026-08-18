@@ -25,21 +25,29 @@ The difficult part was not deciding to build another business application. It wa
 
 ---
 
-## What I Built
+## The Problems I Set Out to Solve
 
-**MarketGrowthOS is a 0→1 SaaS product I took from a fragmented business problem through product definition, architecture, engineering collaboration and QA.**
+MarketGrowthOS was not conceived as a collection of SaaS features. It was a response to recurring operational problems faced by small and medium-sized businesses, and by smaller service businesses and solopreneurs trying to manage growth with fragmented tools.
 
-### The interesting parts
+The product decisions were driven by those problems.
 
-| Product problem | My product decision |
+| Business / user problem | Product decision |
 |---|---|
-| Fragmented CRM and operations | Unified commercial and operations platform |
-| Multiple businesses sharing one platform | Three-tier tenant model and isolation rules |
-| CRM progression was ambiguous | Explicit lifecycle, qualification gates and conversion policies |
-| Marketing capability already existed upstream | Defined the Mautic/GrowthOS ownership boundary |
-| Mautic did not provide the required consultation workflow | Built a lean configurable consultation system |
-| No dedicated QA function | Built a 1,200+ line validation process across 15 modules |
+| **SMBs were managing sales, projects, appointments, marketing and other operations across disconnected tools.** The resulting handoffs created manual work, fragmented information and unnecessary software cost. | **Build a unified business operations platform** bringing CRM, marketing, consultations, projects, billing and support into a connected workflow. |
+| **Businesses lacked a structured CRM process for moving a lead from initial contact through qualification and conversion.** Records and commercial progress could become dependent on manual interpretation. | **Design an explicit CRM lifecycle** with defined states, qualification gates, valid transitions and policy-driven conversion. |
+| **Marketing automation and CRM activity were not necessarily owned by the same system.** Rebuilding everything inside GrowthOS would add unnecessary complexity. | **Define a clear Mautic ↔ GrowthOS boundary:** Mautic handles marketing execution while GrowthOS owns business and customer state. |
+| **Businesses need consultations, but a generic marketing form does not provide a proper consultation workflow.** | **Build a native configurable consultation system** supporting scheduling, intake, qualification, meeting format and structured submissions. |
+| **Solopreneurs and service providers may sell consultations directly as a service, rather than using consultation only as a lead-generation step.** | **Make consultations configurable as a commercial product**, including free or paid consultations and merchant-controlled availability. |
+| **SMBs need to manage customer work after conversion, not just capture leads.** | **Connect CRM and downstream operational workflows** so customer progression can continue into projects, support and other business processes. |
+| **Growing businesses need to manage recurring commercial relationships and subscriptions.** | **Include billing and subscription capabilities**, with Stripe infrastructure supporting platform and merchant-level payment flows. |
+| **As businesses grow, they need multiple users working within the same business without losing control of access and data.** | **Design a multi-tenant organisation model** with defined users, teams, roles, permissions and customer ownership boundaries. |
+| **Many small businesses cannot justify assembling and maintaining a large collection of specialist tools.** | **Use an integrated platform model**, while deliberately integrating existing specialist capabilities where rebuilding them would add little value. |
+| **Operational requirements often expand faster than a small business can build internal systems around them.** | **Design the platform around configurable workflows and merchant-controlled settings** rather than requiring engineering involvement for every business variation. |
+| **Some operational capabilities were important but not necessary for the first release.** | **Keep HR & Payroll in the future scope** rather than allowing additional operational functionality to expand V1 beyond what the initial product could realistically deliver. |
 
+The common product principle was simple:
+
+> **Start with the operational problem, then decide what the product should own, what it should integrate, what should be configurable, and what should wait.**
 ---
 
 # Product in Action
