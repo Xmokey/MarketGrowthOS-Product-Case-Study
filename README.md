@@ -25,21 +25,15 @@ The difficult part was not deciding to build another business application. It wa
 
 ---
 
-## The Problems I Set Out to Solve
-
-MarketGrowthOS was built around recurring operational problems faced by SMBs, service businesses and solopreneurs.
-
 | Problem | Product decision |
 |---|---|
-| **Fragmented tools** | **Unified platform** — Bring CRM, marketing, consultations, project delivery, billing and support into one connected operating environment instead of forcing businesses to coordinate across multiple disconnected tools. |
+| **Fragmented & heavyweight tools** | **Unified lightweight platform** — Bring CRM, marketing, consultations, project delivery, billing and support into one connected operating environment designed for SMBs and solopreneurs, without the complexity and overhead of enterprise platforms. |
 | **Repetitive work** | **Automation** — Automate workflows, emails, campaigns and repetitive operational tasks around defined business events and customer states. |
 | **Abandoned leads** | **Re-engagement** — Detect abandoned forms and create opportunities to re-engage prospects who entered the funnel but did not complete the intended action. |
 | **Poor ad intelligence** | **UTM tracking** — Capture campaign and traffic parameters so businesses can connect lead activity back to advertising sources and make better-informed marketing decisions. |
 | **Lead progression gaps** | **CRM lifecycle** — Create an explicit path from lead through qualification, opportunity and conversion, with defined gates, states and transition rules. |
 | **Consultation gap** | **Native consultation system** — Build a configurable consultation capability for scheduling, intake and qualification, including support for businesses and solopreneurs offering paid consultations as a service. |
 | **Delivery visibility** | **Project management + client monitoring/feedback** — Give teams a shared workspace for project delivery while allowing clients to see real-time progress, monitor work and provide structured feedback. |
-
-> **The product principle:** identify the operational gap first, then decide what GrowthOS should build, integrate, automate or defer.
 ---
 
 # Product in Action
