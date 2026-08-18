@@ -43,15 +43,21 @@ The difficult part was not deciding to build another business application. It wa
 
 ### Merchant Dashboard
 
-*Screenshot goes here*
+![MarketGrowthOS Merchant Dashboard](assets/merchant-dashboard.png)
 
-### CRM
+*Unified view across CRM, sales, operations, projects, contacts, campaigns and consultations.*
 
-*Screenshot goes here*
+### Opportunity Pipeline
 
-### Consultation Booking
+![MarketGrowthOS Opportunity Pipeline](assets/opportunity-pipeline.png)
 
-*Screenshot goes here*
+*Explicit sales stages and controlled progression through the commercial lifecycle.*
+
+### Consultation System
+
+![MarketGrowthOS Consultation System](assets/consultation-system.png)
+
+*Configurable consultation workflow supporting scheduling, meeting format, free or paid consultations, intake fields and merchant-controlled availability.*
 
 ---
 
