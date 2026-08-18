@@ -1,4 +1,5 @@
 # MarketGrowthOS
+
 ## Multi-Tenant SaaS CRM & Growth Operations Platform
 
 **Status:** Testing / Moving Toward Production  
@@ -131,20 +132,75 @@ This required defining what conditions had to exist before a record could move i
 
 One of the recurring product decisions was determining what MarketGrowthOS should own and what should remain with an existing system.
 
-We use **Mautic** as the marketing engine.
+The product boundary was deliberately split between **marketing execution** and **business/operational state**.
+
+### Mautic
+
+Mautic serves as the marketing engine for functionality such as:
+
+- Forms
+- Landing pages
+- Campaigns
+- Nurture sequences
+- Segmentation
+- Tags
+- Marketing behavioural signals
+
+### MarketGrowthOS
+
+GrowthOS owns the core business and operational state, including:
+
+- CRM records
+- Lifecycle state
+- Conversion logic
+- Permissions
+- Workflow orchestration
+- Appointment booking
+- Consultation booking
+- Billing state
 
 Rather than rebuilding marketing functionality that already existed upstream, I defined the integration boundary between MarketGrowthOS and Mautic.
 
-That meant deciding:
-
-- Which functionality belongs in MarketGrowthOS
-- Which functionality remains in Mautic
-- What data crosses the boundary
-- How the systems interact
-- Where ownership of a workflow ends
-- What should happen when an upstream dependency changes
-
 This became an important product-boundary decision rather than simply an integration task.
+
+---
+
+# Consultation Booking System
+
+Mautic does not provide the appointment and consultation capability required by MarketGrowthOS.
+
+Rather than forcing the workflow into a marketing-form model, we designed a **lean, configurable consultation booking system** as a native GrowthOS capability.
+
+The objective was to allow merchants and administrators to create consultation experiences without requiring developer involvement.
+
+The system supports:
+
+- Configurable form fields
+- Required and optional fields
+- Field reordering
+- Single-page or multi-step forms
+- Consultation type selection
+- Date and time selection
+- Time-zone handling
+- Virtual or in-person meetings
+- Qualification and intake questions
+- File uploads
+- Consent capture
+- Structured submission output
+- Mobile-oriented, low-friction booking
+
+The system supports different levels of consultation complexity, from simple booking and lead capture through more detailed assessment and intake flows.
+
+Example consultation types include:
+
+- General Consultation
+- Strategy Session
+- Product Demo
+- Care Assessment
+
+The system was also designed with **solopreneurs and service businesses that offer paid consultations as a service** in mind.
+
+This means consultation booking can function not only as a lead-generation mechanism, but as a direct entry point into a commercial workflow.
 
 ---
 
@@ -201,7 +257,7 @@ The purpose is to find technical constraints and implementation implications whi
 
 There is no separate QA function for MarketGrowthOS, so I built and run the product QA process myself.
 
-I created a **1,200+ line QA checklist covering 15 modules** and a 2nd-stage validation mirroring the Given-When-Then (GWT).
+I created a **1,200+ line QA checklist covering 15 modules** and a second-stage validation mirroring the **Given-When-Then (GWT)** approach.
 
 The QA process is intended to validate more than whether individual screens work.
 
@@ -271,6 +327,7 @@ The strongest evidence from the project is the product work itself:
 - CRM lifecycle design
 - Workflow and state modelling
 - Product boundary decisions
+- Custom consultation booking capability
 - Engineering specifications
 - Scope control
 - QA ownership
@@ -281,21 +338,27 @@ The strongest evidence from the project is the product work itself:
 # What This Project Demonstrates
 
 ### SaaS Product Design
+
 Taking a broad business problem and turning it into a coherent multi-tenant product model.
 
 ### Technical Product Management
+
 Working with engineering on architecture, dependencies, integrations and implementation constraints.
 
 ### Workflow Design
+
 Designing states, gates, permissions, transitions and downstream consequences rather than focusing only on screens.
 
 ### Product Scope
+
 Knowing when to build, integrate, defer or reject functionality.
 
 ### Specification
+
 Turning product decisions into detailed, testable implementation requirements.
 
 ### QA Ownership
+
 Validating the product against intended behaviour and identifying contradictions before they become production problems.
 
 ---
