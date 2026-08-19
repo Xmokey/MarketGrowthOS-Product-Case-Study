@@ -36,6 +36,10 @@ The difficult part was not deciding to build another business application. It wa
 | **Delivery visibility** | **Project management + client monitoring/feedback** — Give teams a shared workspace for project delivery while allowing clients to see real-time progress, monitor work and provide structured feedback. |
 ---
 
+![From disconnected tools to a unified operating environment](assets/unified-tools.png)
+
+![The people in MarketGrowthOS](assets/people-in-growthos.png)
+
 # Product in Action
 
 ## Merchant Dashboard
@@ -124,6 +128,8 @@ The architecture was established as a product model rather than treating each fe
 
 A recurring architectural decision was determining what GrowthOS should own and what should remain with external systems.
 
+![MarketGrowthOS system boundaries and key integrations](assets/system-boundaries.png)
+
 The core principle was:
 
 > **GrowthOS owns business state. Mautic owns marketing execution. Stripe handles payment infrastructure.**
@@ -176,6 +182,8 @@ The CRM was one of the areas where the underlying product logic mattered more th
 The lifecycle was designed around:
 
 **Lead → Qualification → Prospect → Opportunity → Conversion → Onboarding**
+
+![MarketGrowthOS CRM lifecycle and controlled transitions](assets/crm-lifecycle.png)
 
 Rather than allowing records to move freely between statuses, I defined explicit valid state transitions.
 
