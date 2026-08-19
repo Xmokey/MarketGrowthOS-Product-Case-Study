@@ -19,8 +19,8 @@ The product originated from a problem we were experiencing directly inside a dig
 The individual tools worked, but the overall process depended heavily on manual coordination.
 
 MarketGrowthOS was designed to bring the critical commercial workflow together, from lead acquisition and qualification through conversion, onboarding and operational delivery.
-
 The difficult part was not deciding to build another business application. It was turning a broad business problem into a coherent product model that engineering could actually build and test.
+
 ---
 
 ![From disconnected tools to a unified operating environment](assets/unified-tools.png)
