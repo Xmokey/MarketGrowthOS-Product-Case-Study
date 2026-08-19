@@ -1,6 +1,7 @@
 # MarketGrowthOS
 
 ## Multi-Tenant SaaS CRM & Growth Operations Platform
+![MarketGrowthOS](assets/website-hero.png)
 
 **Status:** Testing / Moving Toward Production  
 **Role:** Sole Product Owner  
@@ -21,7 +22,6 @@ MarketGrowthOS was designed to bring the critical commercial workflow together, 
 
 The difficult part was not deciding to build another business application. It was turning a broad business problem into a coherent product model that engineering could actually build and test.
 
-![MarketGrowthOS](assets/website-hero.png)
 
 ---
 
