@@ -21,9 +21,7 @@ The individual tools worked, but the overall process depended heavily on manual 
 MarketGrowthOS was designed to bring the critical commercial workflow together, from lead acquisition and qualification through conversion, onboarding and operational delivery.
 
 The difficult part was not deciding to build another business application. It was turning a broad business problem into a coherent product model that engineering could actually build and test.
-
-
----
+![From disconnected tools to a unified operating environment](assets/unified-tools.png)
 
 | Problem | Product decision |
 |---|---|
@@ -35,8 +33,6 @@ The difficult part was not deciding to build another business application. It wa
 | **Consultation gap** | **Native consultation system** — Build a configurable consultation capability for scheduling, intake and qualification, including support for businesses and solopreneurs offering paid consultations as a service. |
 | **Delivery visibility** | **Project management + client monitoring/feedback** — Give teams a shared workspace for project delivery while allowing clients to see real-time progress, monitor work and provide structured feedback. |
 ---
-
-![From disconnected tools to a unified operating environment](assets/unified-tools.png)
 
 ![The people in MarketGrowthOS](assets/people-in-growthos.png)
 
