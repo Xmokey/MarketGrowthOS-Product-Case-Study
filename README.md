@@ -1,15 +1,14 @@
 # MarketGrowthOS
 
 ## Multi-Tenant SaaS CRM & Growth Operations Platform
-![MarketGrowthOS](assets/website-hero.png)
 
 **Status:** Testing / Moving Toward Production  
 **Role:** Sole Product Owner  
 **Development:** 3-person engineering team  
 **QA:** Product-owned
-
 ---
 
+![MarketGrowthOS](assets/website-hero.png)
 ## Overview
 
 MarketGrowthOS is a multi-tenant SaaS platform designed to bring CRM, marketing automation, consultations, project management, billing and operational workflows into a more unified environment for small and medium-sized businesses.
