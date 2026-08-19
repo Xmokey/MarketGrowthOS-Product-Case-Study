@@ -29,6 +29,8 @@ The core product problems were framed as:
 
 The challenge was turning that broad ambition into a product model that engineering could actually build, test and evolve.
 
+![Unified tools](assets/unified-tools.png)
+
 ---
 
 ## My Role
@@ -37,18 +39,7 @@ I was the **sole Product Owner** for MarketGrowthOS.
 
 My ownership covered the product from problem decomposition through architecture, workflow design, specification, engineering collaboration and product validation.
 
-Key responsibilities included:
-
-- Product discovery and problem decomposition
-- Product architecture and multi-tenant model design
-- CRM lifecycle and conversion logic
-- Workflow and business-rule design
-- Scope and V1 decisions
-- Integration boundary definition
-- Product specifications
-- Engineering feasibility and impact analysis
-- QA process design and execution
-- Production-readiness validation
+Key responsibilities included product discovery and problem decomposition, product architecture and multi-tenant model design, CRM lifecycle and conversion logic, workflow and business-rule design, scope and V1 decisions, integration boundary definition, product specifications, engineering feasibility and impact analysis, QA process design and production-readiness validation.
 
 The work was performed directly with a 3-person engineering team rather than through a separate product-to-engineering handoff.
 
@@ -66,11 +57,11 @@ The core structure became:
 
 A merchant operates independently within the shared platform. Its users, teams, contacts, CRM records, workflows, configuration and operational data belong to that merchant, with tenant isolation as a core requirement.
 
-This was not merely an interface hierarchy. It established the ownership model that downstream features had to respect. fileciteturn24file0L2-L2
+![People in GrowthOS](assets/people-in-growthos.png)
 
-A second architectural decision was separating a **prospective merchant** from an **active tenant**. Tenant provisioning is tied to subscription confirmation rather than treating every prospective business as an operational tenant. fileciteturn24file0L2-L2
+This was not merely an interface hierarchy. It established the ownership model that downstream features had to respect.
 
-That distinction became important because it prevented onboarding state from being confused with active business state.
+A second architectural decision was separating a **prospective merchant** from an **active tenant**. Tenant provisioning is tied to subscription confirmation rather than treating every prospective business as an operational tenant.
 
 ---
 
@@ -82,15 +73,17 @@ The guiding principle became:
 
 > **GrowthOS owns business state. External systems execute specialised capabilities around those boundaries.**
 
-GrowthOS owns core business and operational state including CRM records, lifecycle state, qualification and conversion logic, permissions, consultations, workflow orchestration and billing state. fileciteturn24file0L2-L2
+GrowthOS owns core business and operational state including CRM records, lifecycle state, qualification and conversion logic, permissions, consultations, workflow orchestration and billing state.
 
-This created a deliberate separation from Mautic, which serves as the marketing execution engine for forms, landing pages, campaigns, nurture sequences, segmentation, tags and behavioural signals. fileciteturn24file0L2-L2
+This created a deliberate separation from Mautic, which serves as the marketing execution engine for forms, landing pages, campaigns, nurture sequences, segmentation, tags and behavioural signals.
 
-Stripe similarly handles payment infrastructure while GrowthOS retains the product and business context around billing. At the merchant level, Stripe Connect supports payment relationships associated with individual businesses and their customers. fileciteturn24file0L2-L2
+Stripe similarly handles payment infrastructure while GrowthOS retains the product and business context around billing. At the merchant level, Stripe Connect supports payment relationships associated with individual businesses and their customers.
 
-The important product decision was therefore not simply **build versus buy**. It was:
+The important product decision was not simply **build versus buy**. It was:
 
 > **What should GrowthOS be responsible for, and where should another system remain the execution layer?**
+
+![System boundaries](assets/system-boundaries.png)
 
 ---
 
@@ -100,11 +93,11 @@ A significant consequence of the ownership model was the Mautic integration.
 
 Mautic was not treated as a passive source from which GrowthOS simply imported contacts. The integration was designed as a **two-way handshake**.
 
-Relevant marketing and activity signals can move from Mautic into GrowthOS, while GrowthOS can send business-state information such as contact records, lifecycle state, tags and conversion state back to Mautic for marketing execution. fileciteturn24file0L2-L2
+Relevant marketing and activity signals can move from Mautic into GrowthOS, while GrowthOS can send business-state information such as contact records, lifecycle state, tags and conversion state back to Mautic for marketing execution.
 
 The critical rule was that synchronization must not transfer ownership of business state.
 
-**GrowthOS remains authoritative for core CRM and operational lifecycle state.** fileciteturn24file0L2-L2
+**GrowthOS remains authoritative for core CRM and operational lifecycle state.**
 
 This boundary later mattered during specification review, when a contradiction in the webhook requirements around bidirectional contact synchronization was identified before implementation. The requirements could be clarified before engineering had to interpret conflicting behaviour.
 
@@ -125,6 +118,8 @@ Rather than allowing records to move freely between statuses, I defined explicit
 The qualification step was designed as a **two-step gate**, separating the qualification decision from subsequent movement through the commercial lifecycle.
 
 Conversion was also policy-driven rather than a simple status change. The system evaluates the applicable conversion conditions before a record becomes a customer.
+
+![CRM lifecycle](assets/crm-lifecycle.png)
 
 This approach made the CRM lifecycle predictable and gave downstream workflows a reliable business state to act upon.
 
@@ -159,14 +154,7 @@ The product vision was broad, but development capacity was finite.
 
 I therefore treated scope as part of product strategy.
 
-V1 decisions considered:
-
-- Business value
-- Technical feasibility
-- Existing platform capability
-- Development capacity
-- Dependency complexity
-- Whether functionality was necessary for the initial product
+V1 decisions considered business value, technical feasibility, existing platform capability, development capacity, dependency complexity and whether functionality was necessary for the initial product.
 
 This meant some capabilities were deliberately integrated, deferred or excluded rather than automatically added because they appeared in the broader product vision.
 
@@ -180,19 +168,7 @@ That shift helped turn a broad collection of requirements into a product that co
 
 ## Turning the Model Into Engineering Specifications
 
-Once the product model and workflows were sufficiently clear, I translated them into detailed implementation requirements.
-
-The specifications covered:
-
-- User roles and permissions
-- States and valid transitions
-- Business rules
-- Data requirements
-- Workflow dependencies
-- Integration behaviour
-- Edge cases
-- Validation requirements
-- Expected system behaviour
+Once the product model and workflows were sufficiently clear, I translated them into detailed implementation requirements covering user roles and permissions, states and valid transitions, business rules, data requirements, workflow dependencies, integration behaviour, edge cases, validation requirements and expected system behaviour.
 
 I continued working with engineering during specification rather than treating the specification as a one-way handoff.
 
@@ -212,18 +188,7 @@ I created a **1,200+ line QA checklist across 15 modules**, followed by second-s
 
 The purpose was not simply to confirm that screens worked. The product needed to be validated against the model that had been defined before implementation.
 
-Validation therefore covered:
-
-- Workflow behaviour
-- State transitions
-- Permissions
-- Validation rules
-- Dependencies
-- Cross-module behaviour
-- Exception handling
-- Integration behaviour
-- Data consistency
-- Specification compliance
+Validation therefore covered workflow behaviour, state transitions, permissions, validation rules, dependencies, cross-module behaviour, exception handling, integration behaviour, data consistency and specification compliance.
 
 This created a feedback loop between product definition and implementation rather than treating QA as a final gate after development.
 
@@ -235,11 +200,11 @@ Several principles emerged from the project.
 
 ### 1. Product boundaries before screens
 
-The ownership model and system boundaries needed to be clear before individual interface requirements could be reliable. fileciteturn24file0L2-L2
+The ownership model and system boundaries needed to be clear before individual interface requirements could be reliable.
 
 ### 2. Business state needs an authority
 
-If two systems can independently claim ownership of the same business state, synchronization becomes a source of ambiguity. GrowthOS therefore retained authority over its core CRM and operational lifecycle. fileciteturn24file0L2-L2
+If two systems can independently claim ownership of the same business state, synchronization becomes a source of ambiguity. GrowthOS therefore retained authority over its core CRM and operational lifecycle.
 
 ### 3. Explicit state is more reliable than implicit assumptions
 
@@ -247,7 +212,7 @@ Lifecycle states, gates and valid transitions make business behaviour enforceabl
 
 ### 4. Integrate specialised execution; own core business logic
 
-The objective was not to eliminate external systems. It was to establish clear responsibility between them. fileciteturn24file0L2-L2
+The objective was not to eliminate external systems. It was to establish clear responsibility between them.
 
 ### 5. Scope is part of product ownership
 
@@ -267,7 +232,7 @@ The product now has explicit boundaries around:
 
 **Tenant ownership → CRM state → workflow orchestration → marketing execution → consultations → billing → external integrations → QA validation**
 
-The work also produced a deeper product documentation layer covering architecture and system ownership, alongside the visual product evidence in the repository README. The architecture documentation records the platform/merchant/customer model, tenant provisioning, system ownership and integration boundaries in detail. fileciteturn24file0L2-L2
+The work also produced a deeper product documentation layer covering architecture and system ownership, alongside the visual product evidence in the repository README.
 
 The product is currently in testing and moving toward production.
 
@@ -296,4 +261,4 @@ No quantified commercial outcome is claimed here because the available product e
 - [MarketGrowthOS README](README.md)
 - [Product Architecture](docs/01-product-architecture.md)
 
-The README provides the visual product overview and screenshots; the documentation provides deeper evidence of the architecture and system-boundary decisions.
+The README provides the broader visual product overview and screenshots; the documentation provides deeper evidence of the architecture and system-boundary decisions.
