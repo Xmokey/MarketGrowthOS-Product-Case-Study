@@ -411,11 +411,11 @@ Validating the implemented product against intended behaviour and identifying co
 
 # Other Product Case Studies
 
+- **Zenith Property Repairs** — Managed property-services marketplace and delivery platform  
+  [View case study](https://github.com/Xmokey/Zenith-Property-Repairs-Case-Study)
+
 - **NexaLife Care** — Healthcare referral and access platform  
   [View case study](https://github.com/Xmokey/NexaLife-Care-HealthTech-Platform-Case-Study)
 
 - **UrCalls** — SaaS video communications platform  
   [View case study](https://github.com/Xmokey/UrCalls-Video-Conferencing-SaaS-Platform-Case-Study)
-
-- **Zenith Property Repairs** — Property services platform  
-  *Case study coming next*
