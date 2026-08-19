@@ -6,6 +6,7 @@
 **Role:** Sole Product Owner  
 **Development:** 3-person engineering team  
 **QA:** Product-owned
+
 ---
 
 ![MarketGrowthOS](assets/website-hero.png)
